@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00796b;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #00695c;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #e0f2f1;
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+<nav style="background:#00796b; padding:10px; text-align:center;">
+  <a href="dashboard.html" style="color:white; margin:0 10px;">Dashboard</a>
+  <a href="add_patient.html" style="color:white; margin:0 10px;">Add Patient</a>
+  <a href="appointments.html" style="color:white; margin:0 10px;">Appointments</a>
+  <a href="reports.html" style="color:white; margin:0 10px;">Reports</a>
+  <a href="settings.html" style="color:white; margin:0 10px;">Settings</a>
+</nav>
+
+  <header>
+    <h1>Welcome to Cloud Medical Dashboard</h1>
+  </header>
+  <div class="container">
+    <div class="card">
+      <h3>Patients</h3>
+      <p>Manage patient records and medical history.</p>
+    </div>
+    <div class="card">
+      <h3>Appointments</h3>
+      <p>Schedule, update and view upcoming visits.</p>
+    </div>
+    <div class="card">
+      <h3>Reports</h3>
+      <p>Generate and download health reports.</p>
+    </div>
+    <div class="card">
+      <h3>Settings</h3>
+      <p>Customize your medical app preferences.</p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Cloud Medical App. All rights reserved.
+  </footer>
+</body>
+</html>

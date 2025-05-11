@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #e0f2f1;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #004d40;
+    }
+
+    .settings-box {
+      background: white;
+      padding: 30px;
+      width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+    }
+
+    label, input {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #b2dfdb;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 12px;
+      background: #26a69a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #00897b;
+    }
+  </style>
+</head>
+<body>
+  <nav style="background:#00796b; padding:10px; text-align:center;">
+    <a href="dashboard.html" style="color:white; margin:0 10px;">Dashboard</a>
+    <a href="add_patient.html" style="color:white; margin:0 10px;">Add Patient</a>
+    <a href="appointments.html" style="color:white; margin:0 10px;">Appointments</a>
+    <a href="reports.html" style="color:white; margin:0 10px;">Reports</a>
+    <a href="settings.html" style="color:white; margin:0 10px;">Settings</a>
+  </nav>
+  <h2>Settings</h2>
+  <div class="settings-box">
+    <label for="theme">Theme Color</label>
+    <input type="color" id="theme" value="#00796b" />
+    <label for="notifications">Email Notifications</label>
+    <input type="checkbox" id="notifications" checked />
+    <button onclick="saveSettings()">Save Settings</button>
+  </div>
+  <script>
+    function saveSettings() {
+      alert("Settings saved successfully!");
+    }
+  </script>
+</body>
+</html>

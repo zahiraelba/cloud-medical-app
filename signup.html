@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #e0f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .signup-box {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 128, 128, 0.2);
+      width: 300px;
+    }
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border: 1px solid #b2dfdb;
+      border-radius: 8px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #26c6da;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #00acc1;
+    }
+    .link {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-box">
+    <h2>Sign Up</h2>
+    <input type="text" id="newUsername" placeholder="Choose Username" />
+    <input type="password" id="newPassword" placeholder="Choose Password" />
+    <button onclick="signup()">Sign Up</button>
+    <div class="link">
+      <a href="login.html">Already have an account?</a>
+    </div>
+  </div>
+  <script>
+    function signup() {
+      const username = document.getElementById('newUsername').value;
+      const password = document.getElementById('newPassword').value;
+      if (!username || !password) {
+        alert('Please fill in both fields.');
+        return;
+      }
+      localStorage.setItem(username, JSON.stringify({ password }));
+      alert('Account created! You can log in now.');
+      window.location.href = 'login.html';
+    }
+  </script>
+</body>
+</html>
